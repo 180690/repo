@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: unicorn
+  name: unicorn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: unicorn
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: unicorn
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        resources: {}
+status: {}
